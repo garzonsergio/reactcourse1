@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +15,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React in the middle of the Night <br />
+          {props.titulo}
         </a>
       </header>
     </div>
