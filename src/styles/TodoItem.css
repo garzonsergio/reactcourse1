@@ -1,0 +1,16 @@
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  padding: 10px 0;
+  margin: 2px 0;
+}
+
+.todoItem {
+  font-family: "Roboto", sans-serif;
+}
+
+.tasks-buttons {
+  cursor: pointer;
+}
