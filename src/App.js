@@ -18,6 +18,29 @@ function App() {
   const completedTodos = todos.filter((todo) => todo.completed === true).length;
   const totalTodos = todos.length;
 
+  const completeTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+    const newTodos = [...todos];
+    newTodos[todoIndex].completed = true;
+
+    setTodos(newTodos);
+  };
+
+  const unmarkTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+    const newTodos = [...todos];
+    newTodos[todoIndex].completed = false;
+
+    setTodos(newTodos);
+  };
+
+  const deleteTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+    const newTodos = [...todos];
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos);
+  };
+
   let searchedTodos = [];
 
   if (searchValue.length <= 1) {
@@ -45,6 +68,9 @@ function App() {
               key={todo.text}
               text={todo.text}
               completed={todo.completed}
+              onComplete={() => completeTodo(todo.text)}
+              onUnmark={() => unmarkTodo(todo.text)}
+              onDelete={() => deleteTodo(todo.text)}
             />
           ))}
         </TodoList>
