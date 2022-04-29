@@ -3,4 +3,19 @@
   border: none;
   color: white;
   cursor: pointer;
+  z-index: 1;
+}
+
+.CreateTodoButton:focus {
+  animation: addToClose 1000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes addToClose {
+  0% {
+    transform-origin: 50% 50%;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
