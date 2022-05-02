@@ -7,6 +7,8 @@ import { TodoItem } from "../TodoItem";
 import { CreateToDoButton } from "../CreateToDoButton";
 import { Modal } from "../Modal";
 import { TodoForm } from "../TodoForm";
+import { TodoLoading } from "../TodoLoading";
+import { TodoError } from "../TodoError";
 import "./App.css";
 
 function AppUI() {
@@ -30,8 +32,8 @@ function AppUI() {
         <TodoSearch />
 
         <TodoList>
-          {loading && <p>App loading, please, take a while</p>}
-          {error && <p>Something went wrong, try again</p>}
+          {loading && <TodoLoading />}
+          {error && <TodoError />}
           {!loading && !searchedTodos.length && (
             <p>Create your first task To Do</p>
           )}

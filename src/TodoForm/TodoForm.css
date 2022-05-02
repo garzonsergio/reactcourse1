@@ -1,0 +1,54 @@
+form,
+.buttonContainer {
+  display: flex;
+  font-family: Roboto, Oxygen, "Helvetica Neue", sans-serif;
+}
+form {
+  flex-direction: column;
+}
+form > textarea {
+  min-width: 24rem;
+  font-family: Roboto, Oxygen, "Helvetica Neue", sans-serif;
+  padding: 0.8rem 0.4rem 0 0.4rem;
+  font-size: 1rem;
+}
+.buttonContainer {
+  margin-top: 1.2rem;
+  justify-content: space-around;
+}
+
+.buttonContainer > button {
+  min-width: 6rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.submitButton {
+  background-color: rgba(27, 153, 139, 0.5);
+  color: white;
+  font-weight: 500;
+}
+
+.submitButton:hover {
+  background: rgba(27, 153, 139, 1);
+}
+
+.submitButton:focus {
+  background: rgba(89, 255, 160, 0.5);
+}
+.cancelButton {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+}
+
+.cancelButton:hover {
+  background: rgba(89, 255, 160, 0.5);
+  color: white;
+}
+
+.cancelButton:focus {
+  background: rgba(89, 255, 160, 1);
+  color: black;
+}
