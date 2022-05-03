@@ -9,6 +9,7 @@ li {
 
 .todoItem {
   font-family: "Roboto", sans-serif;
+  /* text-decoration: line-through; */
 }
 
 .tasks-buttons {
